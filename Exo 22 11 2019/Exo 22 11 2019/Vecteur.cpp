@@ -1,4 +1,9 @@
-#include "Vecteur.h"
+#include <iostream>
+#include <cmath>
+#include<cstdlib>
+#include<stdlib.h>
+#include"Vecteur.h"
+// exo69
 //constructeur
 Vecteur::Vecteur(float fX, float fY, float fZ)
 {
@@ -43,8 +48,53 @@ float Vecteur::getfZ()
 {
 	return fZ;
 }
-
+//destructeur
 Vecteur::~Vecteur()
 {
 }
+//Exo 70
+bool Vecteur::Valcoincide(Vecteur vecteur) // comparaison par valeur
+{
+	if (vecteur.fX == fX && vecteur.fY == fY && vecteur.fZ == fZ)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Vecteur::Adcoincide(Vecteur* vecteur)// comparaison par adresse
+{
+	if (vecteur->fX == fX && vecteur->fY == fY && vecteur->fZ == fZ)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Vecteur::Refcoincide(Vecteur& vecteur)// comparaison par reférence
+{
+	if (vecteur.fX == fX && vecteur.fY == fY && vecteur.fZ == fZ)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+Vecteur Vecteur::normax(Vecteur v, Vecteur v2)
+{
+	 float norm1 = v.fX * v.fX + v.fY * v.fY + v.fZ * v.fZ;
+	 return *this;
+	//return v;
+}
+
+
 
