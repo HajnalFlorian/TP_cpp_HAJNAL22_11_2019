@@ -10,14 +10,13 @@ Vecteur::Vecteur(float fX, float fY, float fZ)
 	this->fX = fX;
 	this->fY = fY;
 	this->fZ = fZ;
-	nbrVecteur++;
+
 }
 Vecteur::Vecteur()
 {
 	this->fX = 0.0;
 	this->fY = 0.0;
 	this->fZ = 0.0;
-	nbrVecteur++;
 }
 //Vecteur::Vecteur(float fX = 0.0, float fY = 0.0, float fZ = 0.0);
 //set
@@ -53,7 +52,6 @@ float Vecteur::getfZ()
 //destructeur
 Vecteur::~Vecteur()
 {
-	nbrVecteur--;
 }
 //Exo 70
 bool Vecteur::Valcoincide(Vecteur vecteur) // comparaison par valeur
@@ -135,11 +133,6 @@ float Vecteur::prodScalaire(Vecteur vecteur)
 void Vecteur::affichage()
 {
 	cout << "X: " << fX << endl << "Y: " << fY << endl << "Z: " << fZ << endl;
-}
-
-int Vecteur::numVecteur()
-{
-	return nbrVecteur;
 }
 
 

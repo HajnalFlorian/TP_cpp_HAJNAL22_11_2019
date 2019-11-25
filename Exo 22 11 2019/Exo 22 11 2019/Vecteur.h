@@ -3,10 +3,7 @@ class Vecteur
 {
 private:
 	float fX, fY, fZ, norm1;
-	static int nbrVecteur;
-
 public:
-	int Vecteur::nbrVecteur = 0;
 	//contructeur
 	Vecteur(float fX, float fY, float fZ);
 	Vecteur();
