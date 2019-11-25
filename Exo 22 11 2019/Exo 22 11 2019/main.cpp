@@ -15,6 +15,7 @@ int main()
 	Vecteur v3 = v1.somme(v2);
 	cout << "le produit scalaire des 2 vecteur est : " << v1.prodScalaire(v2) << endl;
 	v3.affichage();
+	cout << v3.numVecteur() << endl;
 
 	/*float normax; test exercice 71
 	//normax = v1.Valnormax(v2); Normax par valeur

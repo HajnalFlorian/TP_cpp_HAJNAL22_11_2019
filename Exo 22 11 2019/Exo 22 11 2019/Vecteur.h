@@ -3,9 +3,10 @@ class Vecteur
 {
 private:
 	float fX, fY, fZ, norm1;
-	Vecteur* pVecteur;
+	static int nbrVecteur;
 
 public:
+	int Vecteur::nbrVecteur = 0;
 	//contructeur
 	Vecteur(float fX, float fY, float fZ);
 	Vecteur();
@@ -32,5 +33,7 @@ public:
 	Vecteur somme(Vecteur vecteur);
 	float prodScalaire(Vecteur vecteur);
 	void affichage();
+
+	int numVecteur();
 };
 
