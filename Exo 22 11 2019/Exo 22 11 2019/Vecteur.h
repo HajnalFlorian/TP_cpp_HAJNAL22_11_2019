@@ -24,6 +24,9 @@ public:
 	bool Valcoincide(Vecteur vecteur);
 	bool Adcoincide(Vecteur* vecteur);
 	bool Refcoincide(Vecteur& vecteur);
-	Vecteur normax(Vecteur v, Vecteur v2);
+	//exo 71
+	float Valnormax(Vecteur vecteur);
+	float Refnormax(Vecteur& vecteur);
+	float Adnormax(Vecteur* vecteur);
 };
 

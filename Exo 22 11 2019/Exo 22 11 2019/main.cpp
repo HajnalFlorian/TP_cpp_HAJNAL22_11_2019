@@ -10,8 +10,14 @@ using namespace std;
 
 int main()
 {
-	Vecteur v1(1.0, 2.0, 3.0);
+	Vecteur v1(3.0, 7.0, 9.0);
 	Vecteur v2=Vecteur();
+	float normax;
+	//normax = v1.Valnormax(v2); Normax par valeur
+	//normax = v1.Refnormax(v2); Normax par référence
+	//normax = v1.Adnormax(&v2); Normax par adresse
+	cout << normax << endl;
+	
 
 	bool test;
 	/*test = v1.Valcoincide(v2);

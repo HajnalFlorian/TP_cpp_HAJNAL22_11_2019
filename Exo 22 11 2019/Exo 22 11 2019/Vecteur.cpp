@@ -88,13 +88,32 @@ bool Vecteur::Refcoincide(Vecteur& vecteur)// comparaison par reférence
 		return false;
 	}
 }
-
-Vecteur Vecteur::normax(Vecteur v, Vecteur v2)
+//exo 71
+float Vecteur::Valnormax(Vecteur vecteur)
 {
-	 float norm1 = v.fX * v.fX + v.fY * v.fY + v.fZ * v.fZ;
-	 return *this;
-	//return v;
+	float normv1 = vecteur.fX * vecteur.fX + vecteur.fY * vecteur.fY + vecteur.fZ * vecteur.fZ;
+	float normv2 = fX * fX + fY * fY + fZ * fZ;
+	if (normv1 > normv2)return normv1;
+	else return normv2;
 }
+
+float Vecteur::Refnormax(Vecteur& vecteur)
+{
+	float normv1 = vecteur.fX * vecteur.fX + vecteur.fY * vecteur.fY + vecteur.fZ * vecteur.fZ;
+	float normv2 = fX * fX + fY * fY + fZ * fZ;
+	if (normv1 > normv2)return normv1;
+	else return normv2;
+}
+
+float Vecteur::Adnormax(Vecteur* vecteur)
+{
+	float normv1 = vecteur->fX * vecteur->fX + vecteur->fY * vecteur->fY + vecteur->fZ * vecteur->fZ;
+	float normv2 = fX * fX + fY * fY + fZ * fZ;
+	if (normv1 > normv2)return normv1;
+	else return normv2;
+}
+
+
 
 
 
