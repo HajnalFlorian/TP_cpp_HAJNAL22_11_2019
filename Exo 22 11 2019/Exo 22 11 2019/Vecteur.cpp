@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include<cstdlib>
 #include<stdlib.h>
 #include"Vecteur.h"
+using namespace std;
 // exo69
 //constructeur
 Vecteur::Vecteur(float fX, float fY, float fZ)
@@ -89,7 +89,7 @@ bool Vecteur::Refcoincide(Vecteur& vecteur)// comparaison par reférence
 	}
 }
 //exo 71
-float Vecteur::Valnormax(Vecteur vecteur)
+float Vecteur::Valnormax(Vecteur vecteur) // normx par valeur
 {
 	float normv1 = vecteur.fX * vecteur.fX + vecteur.fY * vecteur.fY + vecteur.fZ * vecteur.fZ;
 	float normv2 = fX * fX + fY * fY + fZ * fZ;
@@ -97,7 +97,7 @@ float Vecteur::Valnormax(Vecteur vecteur)
 	else return normv2;
 }
 
-float Vecteur::Refnormax(Vecteur& vecteur)
+float Vecteur::Refnormax(Vecteur& vecteur) // normax par référence
 {
 	float normv1 = vecteur.fX * vecteur.fX + vecteur.fY * vecteur.fY + vecteur.fZ * vecteur.fZ;
 	float normv2 = fX * fX + fY * fY + fZ * fZ;
@@ -105,12 +105,33 @@ float Vecteur::Refnormax(Vecteur& vecteur)
 	else return normv2;
 }
 
-float Vecteur::Adnormax(Vecteur* vecteur)
+float Vecteur::Adnormax(Vecteur* vecteur) // normax par adresse
 {
 	float normv1 = vecteur->fX * vecteur->fX + vecteur->fY * vecteur->fY + vecteur->fZ * vecteur->fZ;
 	float normv2 = fX * fX + fY * fY + fZ * fZ;
 	if (normv1 > normv2)return normv1;
 	else return normv2;
+}
+//ex72
+Vecteur Vecteur::somme(Vecteur vecteur) //méthode somme retoure variable resultat de la classe vecteur.
+{
+	Vecteur resultat;
+	resultat.fX = fX + vecteur.fX;
+	resultat.fY = fY + vecteur.fY;
+	resultat.fZ = fZ + vecteur.fZ;
+	return resultat;
+}
+
+float Vecteur::prodScalaire(Vecteur vecteur)
+{
+	float resultat = fX*vecteur.fX + fY*vecteur.fY + fZ*vecteur.fZ;
+	return resultat;
+
+}
+
+void Vecteur::affichage()
+{
+	cout << "X: " << fX << endl << "Y: " << fY << endl << "Z: " << fZ << endl;
 }
 
 

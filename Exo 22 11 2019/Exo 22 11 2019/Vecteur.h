@@ -1,4 +1,4 @@
-#pragma once//exo69
+#pragma once//exo69 et 72
 class Vecteur
 {
 private:
@@ -28,5 +28,9 @@ public:
 	float Valnormax(Vecteur vecteur);
 	float Refnormax(Vecteur& vecteur);
 	float Adnormax(Vecteur* vecteur);
+	//exo 72
+	Vecteur somme(Vecteur vecteur);
+	float prodScalaire(Vecteur vecteur);
+	void affichage();
 };
 
